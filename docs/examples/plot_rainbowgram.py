@@ -50,7 +50,7 @@ img = librosa.display.specshow(np.diff(np.unwrap(np.angle(phase)-phase_exp, axis
 ax.set_facecolor('#000')
 cbar = fig.colorbar(img, ticks=[-np.pi, -np.pi/2, 0, np.pi/2, np.pi])
 cbar.ax.set(yticklabels=['-π', '-π/2', "0", 'π/2', 'π']);
-plt.show()
+plt.show(block=False)
 
 ################################
 # The above uses HSV colormap for phase fading to a black background. The twilight colormap 
